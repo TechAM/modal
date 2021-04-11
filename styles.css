@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root{
+    --modal-bg-color: rgb(172, 239, 248);
+    --bg-color: rgb(255, 255, 255);
+    --button-bg-color: rgb(50, 50, 50);
+    --button-secondary-bg-color: rgb(60, 60, 60);
+    --input-bg-color: white;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+
+#modal {
+    width: 50%;
+    height: 60%;
+    background-color: var(--modal-bg-color);
+    position: absolute;
+    left: 50%;
+    top: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: 300ms ease-in;
+}
+
+#modal-border{
+    width: 98%;
+    height: 98%;
+    border: 1px solid black;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translatex(-50%) translateY(-50%);
+}
+
+#modal-header{
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+#modal-title {
+    font-size: 3.5rem;
+    font-family: 'Antic Slab', serif;
+    text-align: center;
+}
+
+#modal-caption {
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid black;
+}
+
+#modal-content {
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    /* top: 15%; */
+    bottom: 0;
+    height: 5rem;
+    margin: auto;
+}
+
+.input-group{
+    width: 100%;
+}
+#cancel{
+    margin-top: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+#email-input {
+    padding: 0 5px;
+    outline: none;
+    border: none;
+    background-color: var(--input-bg-color);
+    height: 100%;
+    width: 50%;
+    font-size: 1.2rem;
+}
+
+button{
+    padding: 0 5px;
+    height: 100%;
+    font-size: 1.2rem;
+    border: none;
+    color: white;
+    background-color: var(--button-bg-color);
+}
+
+button:hover{
+    background-color: var(--button-secondary-bg-color);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 930px), (max-height: 600px) {
+    #modal-title{
+        font-size: 2.5rem;
+    }
+
+    #email-input, button{
+        font-size: 0.9rem;
+    }
+}
